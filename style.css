@@ -1,0 +1,91 @@
+body {
+    background-color: rgba(72, 12, 122, 0.8);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number {
+    color: #000;
+}
+
+.view {
+    border: 5px solid #0d1e22;
+    width: auto;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1185px;
+    padding: 15px;
+}
+.view:nth-child(3), .view:nth-child(4), .view:nth-child(5) {
+    min-height: 600px;
+}
+.board-1, .board-2, .board-3, .board-4, .board-5, .board-6 {
+    width: 50vw;
+    height: 50vw;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.plot {
+    background-color: #cdc4ff;
+    box-shadow: inset 2px 2px 0 rgb(255 255 255 / 5%), inset -2px -2px 0 #665235;
+    text-align: center;
+    min-height: 100px;
+}
+.board-1 .plot:nth-child(3) {
+    background-color: red;
+    grid-column-start: 3;
+}
+
+.board-2 .plot:nth-child(5) {
+    background-color: red;
+    grid-column-start: 5;
+}
+.board-3 .plot:nth-child(1) {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.board-4 .plot:nth-child(1) {
+    background-color: red;
+    grid-column-start: 5;
+    grid-column-end: 2;
+}
+.board-5 .plot:nth-child(1) {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: -2;
+}
+.board-6 .plot:nth-child(1) {
+    background-color: red;
+    grid-column-start: -3;
+}
+.example {
+    padding: 30px;
+}
+
+@media (max-width: 1000px) {
+    .plot {
+        min-height: 85px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .plot {
+        min-height: 40px;
+    }
+    body {
+        font-size: 16px;
+    }
+}
