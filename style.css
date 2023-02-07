@@ -74,6 +74,38 @@ body {
     padding: 30px;
 }
 
+.view_sp {
+    display: grid;
+    grid-template-columns: 20vw 200px;
+    grid-template-areas:  "one two" "three four" "five six";
+    border: 1px solid blanchedalmond;
+    gap: 3px;
+}
+.plot_sp:nth-child(1) {
+    grid-area: one;
+    border: 1px solid black;
+}
+.plot_sp:nth-child(2) {
+    grid-area: two;
+    border: 1px solid black;
+}
+.plot_sp:nth-child(3) {
+    grid-area: three;
+    border: 1px solid black;
+}
+.plot_sp:nth-child(4) {
+    grid-area: four;
+    border: 1px solid black;
+}
+.plot_sp:nth-child(5) {
+    grid-area: five;
+    border: 1px solid black;
+}
+.plot_sp:nth-child(6) {
+    grid-area: six;
+    border: 1px solid black;
+}
+
 @media (max-width: 1000px) {
     .plot {
         min-height: 85px;
